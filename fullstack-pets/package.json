@@ -1,0 +1,28 @@
+{
+  "name": "pets-sql",
+  "version": "1.0.0",
+  "description": "## Set up an npm project",
+  "main": "index.js",
+  "scripts": {
+    "db:delete": "dropdb pets-sql",
+    "db:create": "createdb pets-sql",
+    "db:schema": "psql -f schema.sql pets-sql",
+    "db:seed": "psql -f seed.sql pets-sql",
+    "db:reset": "npm run db:delete && npm run db:create && npm run db:schema && npm run db:seed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radishmouse/fullstack-pets.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/radishmouse/fullstack-pets/issues"
+  },
+  "homepage": "https://github.com/radishmouse/fullstack-pets#readme",
+  "dependencies": {
+    "pg-promise": "^10.3.5"
+  }
+}
